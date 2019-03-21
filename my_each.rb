@@ -1,9 +1,9 @@
-def my_each(words)
-  # code here
-  i = 0 
-  while i < words.length
-  yield words[i]
-  i = i + 1 
-end
-words
+def my_collect(array)
+  i = 0
+  collect = []
+  while i < array.length
+    collect << yield(array[i])
+    i+=1
+  end
+  collect
 end
